@@ -1,0 +1,27 @@
+﻿<Window x:Class="ProtocolCreator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProtocolCreator"
+        mc:Ignorable="d"
+        Title="Protocol Creator" Height="450" Width="800" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    <Grid x:Name="MainGrid">
+        <Button x:Name="buttonStart" Content="Старт" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,202,0,0" FontSize="13" Width="80" Height="30" Click="Button_Start"/>
+        <TextBox x:Name="textBox_Pressure" HorizontalAlignment="Left" Margin="110,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <TextBox x:Name="textBox_Liquid" HorizontalAlignment="Left" Margin="110,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Sample" HorizontalAlignment="Left" Margin="529,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBox_Interval" HorizontalAlignment="Left" Margin="529,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Введите давление:" HorizontalAlignment="Left" Margin="110,29,0,0" VerticalAlignment="Top"/>
+        <Label Content="Введите жидкость:" HorizontalAlignment="Left" Margin="110,73,0,0" VerticalAlignment="Top"/>
+        <Label Content="Введите образец:" HorizontalAlignment="Left" Margin="529,29,0,0" VerticalAlignment="Top"/>
+        <Label Content="Введите интервал изменения напряжения:" HorizontalAlignment="Left" Margin="529,73,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnWriteMode" Content="Записать режим" Click ="btnWriteMode_Click" HorizontalAlignment="Center" Margin="0,290,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="tbWriteToProtocol" HorizontalAlignment="Center" Margin="0,255,0,0" TextWrapping="Wrap" Text="Идет запись в протокол" VerticalAlignment="Top"/>
+        <!-- Эллипс, который будет служить индикатором -->
+        <Ellipse x:Name="BlinkingEllipse" Width="20" Height="20" Fill="Green" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="482,255,0,0"/>
+        <TextBlock x:Name="tbSuccessMsg" HorizontalAlignment="Center" Margin="0,315,0,0" TextWrapping="Wrap" Text="Запись успешна!" VerticalAlignment="Top" RenderTransformOrigin="0.415,-0.499"/>
+        <Button x:Name="btnStopWrite" Content="Остановить запись" Click ="btnStopWrite_Click" HorizontalAlignment="Center" Margin="0,336,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.276,-0.057"/>
+
+    </Grid>
+</Window>

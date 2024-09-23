@@ -124,7 +124,7 @@ namespace ProtocolCreator
             buttonStart.IsEnabled = true;
 
             wordFileWriter.RecordCHF();
-            MessageBox.Show("Запись остановлена. Все изменения сохранены в файл протокола", "Остановка записи", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Запись остановлена. Все изменения сохранены в файл протокола!", "Остановка записи", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
         private void CreateBlinkingAnimation()
